@@ -14,16 +14,17 @@ mv e2fsprogs-$VERSION e2fsprogs
 echo Building e2fsprogs ...
 cd /build/e2fsprogs || exit
 
-mkdir build; cd build
+mkdir build
+cd build || exit
 ../configure
-make
+make "-j$(nproc)" || exit
 strip misc/mke2fs
 
 echo Packaging e2fsprogs ...
 mkdir -p /export/sbin
 cd /export || exit
 
-cp -R /build/e2fsprogs/build/misc/mke2fs sbin
+cp /build/e2fsprogs/build/misc/mke2fs sbin
 
 mkdir legal
 cat > legal/e2fsprogs<< EOF
