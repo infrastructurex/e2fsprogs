@@ -24,7 +24,7 @@ echo Packaging e2fsprogs ...
 mkdir -p /export/sbin
 cd /export || exit
 
-cp /build/e2fsprogs/build/misc/mke2fs sbin
+cp /build/e2fsprogs/build/misc/mke2fs sbin/mkfs.ext4
 
 mkdir legal
 cat > legal/e2fsprogs<< EOF
