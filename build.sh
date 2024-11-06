@@ -18,7 +18,8 @@ mkdir build
 cd build || exit
 ../configure
 make "-j$(nproc)" || exit
-strip misc/mke2fs
+strip --strip-all misc/mke2fs
+upx --best misc/mke2fs
 
 echo Packaging e2fsprogs ...
 mkdir -p /export/sbin
