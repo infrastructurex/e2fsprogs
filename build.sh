@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-VERSION=1.47.1
+VERSION=1.47.2
 SOURCE=https://github.com/tytso/e2fsprogs/archive/refs/tags/v$VERSION.tar.gz
 
 echo Downloading e2fsprogs "$VERSION" ...
